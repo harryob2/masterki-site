@@ -8,12 +8,23 @@
       name="description"
       content="MasterKi helps Android learners make better Anki cards faster with images, audio, mnemonics, and quick text capture."
     />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        wait_for_update: 500,
+      });
+      gtag('js', new Date());
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-402539565"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
       gtag('config', 'AW-402539565');
     </script>
     <link rel="stylesheet" href="styles.css" />
@@ -158,10 +169,75 @@
       <p>MasterKi</p>
       <a href="downloads/masterki-android-debug.apk">Download Android APK</a>
     </footer>
+    <div class="consent-banner" data-consent-banner hidden>
+      <div class="consent-banner__copy">
+        <p class="consent-banner__kicker">Cookie consent</p>
+        <h2>Help us measure what works</h2>
+        <p>
+          We use Google Ads cookies to measure visits and downloads. Choose whether to allow tracking on this device.
+        </p>
+      </div>
+      <div class="consent-banner__actions">
+        <button class="button button-secondary consent-button" type="button" data-consent-reject>
+          Reject
+        </button>
+        <button class="button button-primary consent-button" type="button" data-consent-accept>
+          Accept
+        </button>
+      </div>
+    </div>
     <script>
+      const CONSENT_STORAGE_KEY = "masterki-consent";
+      const consentBanner = document.querySelector("[data-consent-banner]");
+      const consentAcceptButton = document.querySelector("[data-consent-accept]");
+      const consentRejectButton = document.querySelector("[data-consent-reject]");
       const demoShell = document.querySelector(".demo-shell-video");
       const demoVideo = document.querySelector(".product-demo");
       const demoPlayButton = document.querySelector(".demo-play-button");
+
+      function setConsent(value) {
+        if (typeof gtag === "function") {
+          gtag("consent", "update", {
+            ad_storage: value,
+            ad_user_data: value,
+            ad_personalization: value,
+            analytics_storage: value,
+          });
+        }
+
+        try {
+          localStorage.setItem(CONSENT_STORAGE_KEY, value);
+        } catch {
+          // Ignore storage failures and keep the banner functional.
+        }
+
+        if (consentBanner) {
+          consentBanner.hidden = true;
+        }
+      }
+
+      function getStoredConsent() {
+        try {
+          return localStorage.getItem(CONSENT_STORAGE_KEY);
+        } catch {
+          return null;
+        }
+      }
+
+      const storedConsent = getStoredConsent();
+      if (storedConsent === "granted" || storedConsent === "denied") {
+        setConsent(storedConsent);
+      } else if (consentBanner) {
+        consentBanner.hidden = false;
+      }
+
+      if (consentAcceptButton) {
+        consentAcceptButton.addEventListener("click", () => setConsent("granted"));
+      }
+
+      if (consentRejectButton) {
+        consentRejectButton.addEventListener("click", () => setConsent("denied"));
+      }
 
       if (demoShell && demoVideo && demoPlayButton) {
         demoPlayButton.addEventListener("click", async () => {
