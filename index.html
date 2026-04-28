@@ -29,6 +29,21 @@
     <script>
       gtag('config', 'AW-402539565');
     </script>
+    <!-- Event snippet for Form submit conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+          'send_to': 'AW-402539565/FdHgCPno7JEYEK2I-b8B',
+          'event_callback': callback
+        });
+        return false;
+      }
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -55,7 +70,7 @@
             Anki without imports or exports.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="downloads/masterki-android-debug.apk">Download Android APK</a>
+            <a class="button button-primary" href="downloads/masterki-android-debug.apk" onclick="return gtag_report_conversion(this.href);">Download Android APK</a>
             <a class="button button-secondary" href="#founders">Meet the founders</a>
           </div>
         </div>
@@ -148,7 +163,7 @@
           <p class="section-kicker">Android now. More soon.</p>
           <h2 id="closing-title">iOS, desktop, and web apps are coming.</h2>
           <p>Join the waitlist for the next platforms, or install the Android build today.</p>
-          <a class="button button-primary closing-download" href="downloads/masterki-android-debug.apk"
+          <a class="button button-primary closing-download" href="downloads/masterki-android-debug.apk" onclick="return gtag_report_conversion(this.href);"
             >Download Android APK</a
           >
         </div>
@@ -169,7 +184,7 @@
 
     <footer>
       <p>Masterki</p>
-      <a href="downloads/masterki-android-debug.apk">Download Android APK</a>
+      <a href="downloads/masterki-android-debug.apk" onclick="return gtag_report_conversion(this.href);">Download Android APK</a>
     </footer>
     <div class="consent-banner" data-consent-banner hidden>
       <div class="consent-banner__panel">
