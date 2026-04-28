@@ -1,284 +1,412 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Masterki | The Best Anki App For Android</title>
-    <meta
-      name="description"
-      content="Masterki helps Android learners make better Anki cards faster with images, audio, mnemonics, and quick text capture."
-    />
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("consent", "default", {
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-        analytics_storage: "denied",
-        wait_for_update: 500,
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Masterki | The Best Anki App For Android</title>
+  <meta name="description"
+    content="Masterki helps Android learners make better Anki cards faster with images, audio, mnemonics, and quick text capture." />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      analytics_storage: "denied",
+      wait_for_update: 500,
+    });
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", true);
+    gtag('js', new Date());
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-402539565"></script>
+  <script>
+    gtag('config', 'AW-402539565');
+  </script>
+  <!-- Event snippet for Form submit conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-402539565/FdHgCPno7JEYEK2I-b8B',
+        'event_callback': callback
       });
-      gtag("set", "ads_data_redaction", true);
-      gtag("set", "url_passthrough", true);
-      gtag('js', new Date());
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-402539565"></script>
-    <script>
-      gtag('config', 'AW-402539565');
-    </script>
-    <!-- Event snippet for Form submit conversion page -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-          'send_to': 'AW-402539565/FdHgCPno7JEYEK2I-b8B',
-          'event_callback': callback
-        });
-        return false;
-      }
-    </script>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Masterki home">
-        <span class="brand-mark" aria-hidden="true">MK</span>
-        <span>Masterki</span>
-      </a>
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#founders">Founders</a>
-        <a href="#waitlist">Waitlist</a>
-      </nav>
-    </header>
+      return false;
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Android app for Anki learners</p>
-          <h1 id="hero-title">Masterki</h1>
-          <p class="subtitle">The Best Anki App For Android</p>
-          <p class="hero-text">
-            Capture highlighted text, enrich it with images, audio, drawings, and memory aids, then send it straight to
-            Anki without imports or exports.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="downloads/masterki-android-debug.apk" onclick="return gtag_report_conversion(this.href);">Download Android APK</a>
-            <a class="button button-secondary" href="#founders">Meet the founders</a>
-          </div>
+<body>
+  <header class="site-header" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="Masterki home">
+      <span class="brand-mark" aria-hidden="true">MK</span>
+      <span>Masterki</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#founders">Founders</a>
+      <a href="#waitlist">Waitlist</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Android app for Anki learners</p>
+        <h1 id="hero-title">Masterki</h1>
+        <p class="subtitle">The Best Anki App For Android</p>
+        <p class="hero-text">
+          Capture highlighted text, enrich it with images, audio, drawings, and memory aids, then send it straight to
+          Anki without imports or exports.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="downloads/masterki-android-debug.apk"
+            onclick="return gtag_report_conversion(this.href);">Download Android APK</a>
+          <a class="button button-secondary" href="#founders">Meet the founders</a>
         </div>
 
-        <div class="demo-shell demo-shell-video" aria-label="Product demo video">
-          <video
-            class="product-demo"
-            playsinline
-            preload="metadata"
-            poster="assets/demo/product-demo-poster.png"
-          >
-            <source src="assets/demo/product-demo.mp4" type="video/mp4" />
-            <a href="assets/demo/product-demo.mp4">Watch the product demo video</a>
-          </video>
-          <button class="demo-play-button" type="button" aria-label="Play product demo">
-            <span aria-hidden="true"></span>
-          </button>
-        </div>
-      </section>
-
-      <section class="workflow" id="features" aria-label="Features">
-        <div class="workflow-grid">
-          <div class="phone-strip" aria-label="App screenshots">
-            <img src="assets/screenshots/home.png" alt="Masterki home screen" />
-            <img src="assets/screenshots/composer.png" alt="Card composer with image, mnemonic, and audio options" />
-          </div>
-
-          <div class="feature-list">
-            <article>
-              <span>01</span>
-              <div>
-                <h3>Quickly add cards from highlighted text</h3>
-                <p>Select text in any app and open Masterki to build the flashcard.</p>
-              </div>
-            </article>
-            <article>
-              <span>02</span>
-              <div>
-                <h3>Add images from the internet or generate one with AI</h3>
-                <p>Turn abstract material into a visual cue before it gets forgotten.</p>
-              </div>
-            </article>
-            <article>
-              <span>03</span>
-              <div>
-                <h3>Draw images, add audio, and generate mnemonics</h3>
-                <p>Create anagrams, phrases, native-language audio, and quick sketches in the same flow.</p>
-              </div>
-            </article>
-            <article>
-              <span>04</span>
-              <div>
-                <h3>Block distracting apps until you've completed your Anki deck card reviews</h3>
-                <p>Open a blocked app and Masterki can guide you back to the deck that needs attention.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="founders" id="founders" aria-labelledby="founders-title">
-        <h2 id="founders-title">Founders</h2>
-
-        <div class="founder-grid">
-          <article class="founder-profile">
-            <img src="assets/founders/martin.png" alt="Martin" />
-            <h3>Martin</h3>
-            <ul>
-              <li>Graduated Summa Cum Laude from Medical School in University of Galway</li>
-              <li>Best score nationally in General Practice, receiving the HH Gold Medal</li>
-              <li>Trained in Internal Medicine in Ireland and Mayo Clinic</li>
-              <li>PhD in Risk Factors and Blood Biomarkers in Pre-Clinical Dementia</li>
-            </ul>
+        <div class="feature-list-hero">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>Quickly add cards from highlighted text</h3>
+              <p>Select text in any app and open Masterki to build the flashcard.</p>
+            </div>
           </article>
-
-          <article class="founder-profile">
-            <img src="assets/founders/harry.png" alt="Harry" />
-            <h3>Harry</h3>
-            <ul>
-              <li>Graduated Summa Cum Laude in Information Systems from Trinity College Dublin as Laidlaw Scholar</li>
-              <li>Currently studying MPhil in Industrial Systems and AI in Cambridge University as George Moore Fellow</li>
-              <li>Previously a Backend Developer at Deutsche Bank Trading Division, and Data Engineer at Stryker Biomedical</li>
-            </ul>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Add images from the internet or generate one with AI</h3>
+              <p>Turn abstract material into a visual cue before it gets forgotten.</p>
+            </div>
           </article>
-        </div>
-      </section>
-
-      <section class="closing" id="waitlist" aria-labelledby="closing-title">
-        <div>
-          <p class="section-kicker">Android now. More soon.</p>
-          <h2 id="closing-title">iOS, desktop, and web apps are coming.</h2>
-          <p>Join the waitlist for the next platforms, or install the Android build today.</p>
-          <a class="button button-primary closing-download" href="downloads/masterki-android-debug.apk" onclick="return gtag_report_conversion(this.href);"
-            >Download Android APK</a
-          >
-        </div>
-        <form
-          class="waitlist-form"
-          action="mailto:martindavidmulligan@gmail.com,harobrien@gmail.com"
-          method="post"
-          enctype="text/plain"
-        >
-          <label for="email">Email address</label>
-          <div class="form-line">
-            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
-            <button class="button button-primary" type="submit">Join waitlist</button>
-          </div>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <p>Masterki</p>
-      <a href="downloads/masterki-android-debug.apk" onclick="return gtag_report_conversion(this.href);">Download Android APK</a>
-    </footer>
-    <div class="consent-banner" data-consent-banner hidden>
-      <div class="consent-banner__panel">
-        <div class="consent-banner__copy">
-          <p class="consent-banner__kicker">Privacy choice</p>
-          <h2>Cookie settings</h2>
-          <p>We use cookies to make your experience better. You can allow them or continue without them.</p>
-        </div>
-        <div class="consent-banner__actions">
-          <button class="button button-secondary consent-button" type="button" data-consent-reject>
-            Continue without
-          </button>
-          <button class="button button-primary consent-button" type="button" data-consent-accept>
-            Allow cookies
-          </button>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Draw images, add audio, and generate mnemonics</h3>
+              <p>Create anagrams, phrases, native-language audio, and quick sketches in the same flow.</p>
+            </div>
+          </article>
+          <article>
+            <span>04</span>
+            <div>
+              <h3>Block distracting apps until reviews are done</h3>
+              <p>Open a blocked app and Masterki can guide you back to the deck that needs attention.</p>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
+
+    <section class="ai-video-section">
+      <h2 class="ai-video-text">1. Add AI images to improve recall</h2>
+      <div class="ai-video-wrapper split">
+        <div class="video-column">
+          <video class="ai-video" playsinline controls preload="metadata">
+            <source src="assets/ai-video/ai-image-demo-edited.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="image-column">
+          <img src="assets/ai-video/ai-image-recall.png" alt="Flashcard with AI images" class="feature-image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-video-section">
+      <h2 class="ai-video-text">2. Add real images from internet to improve recall</h2>
+      <div class="ai-video-wrapper split">
+        <div class="video-column">
+          <video class="ai-video" playsinline controls preload="metadata">
+            <source src="assets/ai-video/image-search-internet-edited.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="image-column">
+          <img src="assets/ai-video/television-inventor.png" alt="Flashcard with internet images"
+            class="feature-image" />
+        </div>
+      </div>
+    </section>
+
+      <section class="ai-video-section">
+        <h2 class="ai-video-text">3. Add images from camera</h2>
+        <div class="ai-video-wrapper split">
+          <div class="video-column">
+            <video class="ai-video" playsinline controls preload="metadata">
+              <source src="assets/ai-video/video-from-phone-edited.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="image-column">
+            <img src="assets/ai-video/egg-freezing-rates.png" alt="Flashcard with camera images" class="feature-image" />
+          </div>
+        </div>
+      </section>
+
+      <section class="ai-video-section">
+        <h2 class="ai-video-text">4. Draw to improve recall</h2>
+        <div class="ai-video-wrapper split">
+          <div class="video-column">
+            <video class="ai-video" playsinline controls preload="metadata">
+              <source src="assets/ai-video/drawing-demo-edited.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="image-column">
+            <img src="assets/ai-video/chest-pain-drawing.png" alt="Flashcard with drawings" class="feature-image" />
+          </div>
+        </div>
+      </section>
+
+      <section class="ai-video-section">
+        <h2 class="ai-video-text">5. Add audio for language learning</h2>
+        <div class="ai-video-wrapper split">
+          <div class="video-column">
+            <video class="ai-video" playsinline controls preload="metadata">
+              <source src="assets/ai-video/audio-demo-edited.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="image-column">
+            <img src="assets/ai-video/audio-example.png" alt="Flashcard with audio" class="feature-image" />
+          </div>
+        </div>
+      </section>
+
+    <section class="ai-video-section">
+      <h2 class="ai-video-text">6. Add memory aid to improve recall</h2>
+      <div class="ai-video-wrapper split">
+        <div class="video-column">
+          <video class="ai-video" playsinline controls preload="metadata">
+            <source src="assets/ai-video/memory-aid-demo-edited.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="image-column">
+          <img src="assets/ai-video/memory-aid-example.png" alt="Flashcard with memory aid" class="feature-image" />
+        </div>
+      </div>
+    </section>
+
+      <section class="ai-video-section">
+        <h2 class="ai-video-text">7. Review mode</h2>
+        <div class="ai-video-wrapper split">
+          <div class="video-column">
+            <video class="ai-video" playsinline controls preload="metadata">
+              <source src="assets/ai-video/review-mode-demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="image-column">
+            <img src="assets/ai-video/review-mode-example.png" alt="Review mode interface" class="feature-image" />
+          </div>
+        </div>
+      </section>
+
+    <section class="ai-video-section">
+      <h2 class="ai-video-text">8. Create cards using AI</h2>
+      <div class="ai-video-wrapper split">
+        <div class="video-column">
+          <video class="ai-video" playsinline controls preload="metadata">
+            <source src="assets/ai-video/type-to-ai-demo-edited.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="image-column">
+          <img src="assets/ai-video/ai-composing.png" alt="AI flashcard generation interface" class="feature-image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-video-section">
+      <h2 class="ai-video-text">9. Quick add</h2>
+      <div class="ai-video-wrapper split">
+        <div class="video-column">
+          <video class="ai-video" playsinline controls preload="metadata">
+            <source src="assets/ai-video/quick-add-demo-edited.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="image-column">
+          <img src="assets/ai-video/quick-add-tile.png" alt="Android quick settings with MasterKi" class="feature-image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-video-section">
+      <h2 class="ai-video-text">10. App block to guarantee consistency</h2>
+      <div class="ai-video-wrapper split">
+        <div class="video-column">
+          <video class="ai-video" playsinline controls preload="metadata">
+            <source src="assets/ai-video/app-block-demo-edited.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="image-column">
+          <img src="assets/ai-video/app-block-settings.png" alt="App blocking settings interface" class="feature-image" />
+        </div>
+      </div>
+    </section>
+
+
+    <section class="founders" id="founders" aria-labelledby="founders-title">
+      <h2 id="founders-title">Founders</h2>
+
+      <div class="founder-grid">
+        <article class="founder-profile">
+          <img src="assets/founders/martin.png" alt="Martin" />
+          <h3>Martin</h3>
+          <ul>
+            <li>Graduated Summa Cum Laude from Medical School in University of Galway</li>
+            <li>Best score nationally in General Practice, receiving the HH Gold Medal</li>
+            <li>Trained in Internal Medicine in Ireland and Mayo Clinic</li>
+            <li>PhD in Risk Factors and Blood Biomarkers in Pre-Clinical Dementia</li>
+          </ul>
+        </article>
+
+        <article class="founder-profile">
+          <img src="assets/founders/harry.png" alt="Harry" />
+          <h3>Harry</h3>
+          <ul>
+            <li>Graduated Summa Cum Laude in Information Systems from Trinity College Dublin as Laidlaw Scholar</li>
+            <li>Currently studying MPhil in Industrial Systems and AI in Cambridge University as George Moore Fellow
+            </li>
+            <li>Previously a Backend Developer at Deutsche Bank Trading Division, and Data Engineer at Stryker
+              Biomedical</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing" id="waitlist" aria-labelledby="closing-title">
+      <div>
+        <p class="section-kicker">Android now. More soon.</p>
+        <h2 id="closing-title">iOS, desktop, and web apps are coming.</h2>
+        <p>Join the waitlist for the next platforms, or install the Android build today.</p>
+        <a class="button button-primary closing-download" href="downloads/masterki-android-debug.apk"
+          onclick="return gtag_report_conversion(this.href);">Download Android APK</a>
+      </div>
+      <form class="waitlist-form" action="mailto:martindavidmulligan@gmail.com,harobrien@gmail.com" method="post"
+        enctype="text/plain">
+        <label for="email">Email address</label>
+        <div class="form-line">
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          <button class="button button-primary" type="submit">Join waitlist</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Masterki</p>
+    <a href="downloads/masterki-android-debug.apk" onclick="return gtag_report_conversion(this.href);">Download Android
+      APK</a>
+  </footer>
+  <div class="consent-banner" data-consent-banner hidden>
+    <div class="consent-banner__panel">
+      <div class="consent-banner__copy">
+        <p class="consent-banner__kicker">Privacy choice</p>
+        <h2>Cookie settings</h2>
+        <p>We use cookies to make your experience better. You can allow them or continue without them.</p>
+      </div>
+      <div class="consent-banner__actions">
+        <button class="button button-secondary consent-button" type="button" data-consent-reject>
+          Continue without
+        </button>
+        <button class="button button-primary consent-button" type="button" data-consent-accept>
+          Allow cookies
+        </button>
+      </div>
     </div>
-    <script>
-      const CONSENT_STORAGE_KEY = "masterki-consent";
-      const consentBanner = document.querySelector("[data-consent-banner]");
-      const consentAcceptButton = document.querySelector("[data-consent-accept]");
-      const consentRejectButton = document.querySelector("[data-consent-reject]");
-      const demoShell = document.querySelector(".demo-shell-video");
-      const demoVideo = document.querySelector(".product-demo");
-      const demoPlayButton = document.querySelector(".demo-play-button");
+  </div>
+  <script>
+    const CONSENT_STORAGE_KEY = "masterki-consent";
+    const consentBanner = document.querySelector("[data-consent-banner]");
+    const consentAcceptButton = document.querySelector("[data-consent-accept]");
+    const consentRejectButton = document.querySelector("[data-consent-reject]");
+    const demoShell = document.querySelector(".demo-shell-video");
+    const demoVideo = document.querySelector(".product-demo");
+    const demoPlayButton = document.querySelector(".demo-play-button");
 
-      function setConsent(value) {
-        if (typeof gtag === "function") {
-          gtag("consent", "update", {
-            ad_storage: value,
-            ad_user_data: value,
-            ad_personalization: value,
-            analytics_storage: value,
-          });
-        }
+    function setConsent(value) {
+      if (typeof gtag === "function") {
+        gtag("consent", "update", {
+          ad_storage: value,
+          ad_user_data: value,
+          ad_personalization: value,
+          analytics_storage: value,
+        });
+      }
 
+      try {
+        localStorage.setItem(CONSENT_STORAGE_KEY, value);
+      } catch {
+        // Ignore storage failures and keep the banner functional.
+      }
+
+      if (consentBanner) {
+        consentBanner.hidden = true;
+      }
+    }
+
+    function getStoredConsent() {
+      try {
+        return localStorage.getItem(CONSENT_STORAGE_KEY);
+      } catch {
+        return null;
+      }
+    }
+
+    const storedConsent = getStoredConsent();
+    if (storedConsent === "granted" || storedConsent === "denied") {
+      setConsent(storedConsent);
+    } else if (consentBanner) {
+      consentBanner.hidden = false;
+    }
+
+    if (consentAcceptButton) {
+      consentAcceptButton.addEventListener("click", () => setConsent("granted"));
+    }
+
+    if (consentRejectButton) {
+      consentRejectButton.addEventListener("click", () => setConsent("denied"));
+    }
+
+    if (demoShell && demoVideo && demoPlayButton) {
+      demoPlayButton.addEventListener("click", async () => {
+        demoShell.classList.add("is-playing");
+        demoVideo.controls = true;
         try {
-          localStorage.setItem(CONSENT_STORAGE_KEY, value);
+          await demoVideo.play();
         } catch {
-          // Ignore storage failures and keep the banner functional.
+          demoShell.classList.remove("is-playing");
+          demoVideo.controls = false;
         }
+      });
 
-        if (consentBanner) {
-          consentBanner.hidden = true;
+      demoVideo.addEventListener("pause", () => {
+        if (!demoVideo.ended) {
+          demoShell.classList.remove("is-playing");
         }
-      }
+      });
 
-      function getStoredConsent() {
-        try {
-          return localStorage.getItem(CONSENT_STORAGE_KEY);
-        } catch {
-          return null;
-        }
-      }
+      demoVideo.addEventListener("play", () => {
+        demoShell.classList.add("is-playing");
+        demoVideo.controls = true;
+      });
+    }
+  </script>
+</body>
 
-      const storedConsent = getStoredConsent();
-      if (storedConsent === "granted" || storedConsent === "denied") {
-        setConsent(storedConsent);
-      } else if (consentBanner) {
-        consentBanner.hidden = false;
-      }
-
-      if (consentAcceptButton) {
-        consentAcceptButton.addEventListener("click", () => setConsent("granted"));
-      }
-
-      if (consentRejectButton) {
-        consentRejectButton.addEventListener("click", () => setConsent("denied"));
-      }
-
-      if (demoShell && demoVideo && demoPlayButton) {
-        demoPlayButton.addEventListener("click", async () => {
-          demoShell.classList.add("is-playing");
-          demoVideo.controls = true;
-          try {
-            await demoVideo.play();
-          } catch {
-            demoShell.classList.remove("is-playing");
-            demoVideo.controls = false;
-          }
-        });
-
-        demoVideo.addEventListener("pause", () => {
-          if (!demoVideo.ended) {
-            demoShell.classList.remove("is-playing");
-          }
-        });
-
-        demoVideo.addEventListener("play", () => {
-          demoShell.classList.add("is-playing");
-          demoVideo.controls = true;
-        });
-      }
-    </script>
-  </body>
 </html>
