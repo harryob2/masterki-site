@@ -69,16 +69,10 @@ nav {
   text-decoration: none;
 }
 
-.brand-mark {
-  align-items: center;
-  background: var(--ink);
-  border-radius: 8px;
-  color: white;
-  display: inline-flex;
-  font-size: 0.74rem;
+.brand-logo {
   height: 38px;
-  justify-content: center;
-  width: 38px;
+  width: auto;
+  display: block;
 }
 
 nav {
