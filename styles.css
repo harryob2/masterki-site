@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,soft@9..144,700,100&family=Inter:wght@400;500;600;800&display=swap');
 
 :root {
-  --paper: #f7f9f6;
+  --paper: #ffffff;
   --ink: #151817;
   --soft-ink: #4b5651;
   --line: #dce3dc;
@@ -100,9 +100,13 @@ nav a:hover {
     rgba(247, 249, 246, 0.9) 52%,
     rgba(238, 244, 238, 0.78) 100%
   );
-  display: grid;
-  gap: clamp(34px, 6vw, 88px);
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 500px);
+.hero {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   min-height: calc(100svh - var(--header-height));
   padding: clamp(42px, 8vw, 96px) clamp(20px, 6vw, 76px);
 }
@@ -130,7 +134,7 @@ p {
 }
 
 .hero-logo-wrapper {
-  margin-bottom: 22px;
+  margin: 0 auto 22px;
   max-width: 600px;
 }
 
@@ -190,6 +194,7 @@ h3 {
   gap: 12px;
   margin-top: 32px;
   margin-bottom: 48px;
+  justify-content: center;
 }
 
 
