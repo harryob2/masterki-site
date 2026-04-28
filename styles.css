@@ -100,16 +100,16 @@ nav a:hover {
     rgba(247, 249, 246, 0.9) 52%,
     rgba(238, 244, 238, 0.78) 100%
   );
-  display: grid;
-  gap: clamp(34px, 6vw, 88px);
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 500px);
+  display: flex;
+  justify-content: center;
   min-height: calc(100svh - var(--header-height));
   padding: clamp(42px, 8vw, 96px) clamp(20px, 6vw, 76px);
 }
 
 .hero-copy {
   animation: rise-in 760ms ease both;
-  max-width: 720px;
+  max-width: 900px;
+  width: 100%;
 }
 
 .eyebrow,
@@ -417,11 +417,18 @@ h3 {
 
 .feature-list-hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 64px;
   margin-top: 48px;
   border-top: 1px solid var(--line);
   padding-top: 48px;
+}
+
+@media (max-width: 720px) {
+  .feature-list-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
 
 .feature-list-hero article {
