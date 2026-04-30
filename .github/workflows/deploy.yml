@@ -1,0 +1,22 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Sync Site Files
+    runs-on: [self-hosted, linux]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sync site files
+        run: |
+          rsync -av --delete \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            ./ /home/harry/projects/masterki-site/
