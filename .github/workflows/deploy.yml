@@ -19,4 +19,16 @@ jobs:
           rsync -av --delete \
             --exclude '.git/' \
             --exclude '.github/' \
+            --exclude 'downloads/' \
             ./ /home/harry/projects/masterki-site/
+
+      - name: Verify APK is accessible
+        run: |
+          APK="/home/harry/projects/masterki-site/downloads/masterki-android-debug.apk"
+          if [ ! -f "$APK" ]; then
+            echo "ERROR: APK not found at $APK"
+            echo "The downloads/ directory is not synced by this workflow."
+            echo "Trigger the Android APK build in masterki-source to deploy it."
+            exit 1
+          fi
+          echo "APK present: $(du -h "$APK" | cut -f1)"
